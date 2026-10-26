@@ -13,6 +13,9 @@ class Source(BaseModel):
     
     url: str = Field(description="the url of the source")
     
+##Structured output allow agents to return data in a specific preditable format
+##EX / res['structured_response'].sources -> list of sources 
+##EX / res['structured_response'].response -> agent res str
 class AgentResponse(BaseModel):
     """Schema for the agent response with answer and sources"""
     
